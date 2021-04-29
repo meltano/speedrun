@@ -23,7 +23,7 @@ meltano select tap-gitlab tags
 # And now it's time to add the loader for PostgreSQL, which I have running on my local machine
 meltano add loader target-postgres
 # And we configure it with the correct username
-meltano config target-postgres set postgres_user my-username # TODO: Add the username for your (local) PostgreSQL instance here
+meltano config target-postgres set postgres_username my-username # TODO: Add the username for your (local) PostgreSQL instance here
 # And the correct database name
 meltano config target-postgres set postgres_database speedrun
 
