@@ -15,5 +15,5 @@ plugins:
     variant: datamill-co
     pip_url: singer-target-postgres
     config:
-      postgres_user: douwemaan
+      postgres_user: my-username # TODO: Add the username for your (local) PostgreSQL instance here
       postgres_database: speedrun
