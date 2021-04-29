@@ -36,6 +36,11 @@ SELECT * FROM tap_gitlab.tags ORDER BY _sdc_received_at;
 # And there you go!
 ```
 
+If you clone this repository and [install the `meltano` CLI](https://meltano.com/docs/getting-started.html#install-meltano),
+you can jump straight to the `meltano elt tap-gitlab target-postgres` step.
+
+You will likely need to update the value for `postgres_username` in `meltano.yml`, or using `meltano config target-postgres set postgres_username <your-username>`.
+
 ## Tools
 
 - Meltano: ELT for the DataOps era – https://meltano.com/
