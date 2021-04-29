@@ -1,0 +1,19 @@
+version: 1
+send_anonymous_usage_stats: false
+plugins:
+  extractors:
+  - name: tap-gitlab
+    variant: meltano
+    pip_url: git+https://gitlab.com/meltano/tap-gitlab.git
+    config:
+      projects: meltano/meltano
+      start_date: '2021-04-01T00:00:00Z'
+    select:
+    - tags.*
+  loaders:
+  - name: target-postgres
+    variant: datamill-co
+    pip_url: singer-target-postgres
+    config:
+      postgres_user: douwemaan
+      postgres_database: speedrun
